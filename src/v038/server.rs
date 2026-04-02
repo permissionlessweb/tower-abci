@@ -3,7 +3,7 @@ use std::convert::{TryFrom, TryInto};
 use futures::future::{FutureExt, TryFutureExt};
 use futures::sink::SinkExt;
 use futures::stream::{FuturesOrdered, StreamExt};
-use tokio::io::{AsyncReadExt, AsyncWriteExt};
+use tokio::io::{AsyncRead, AsyncWrite};
 use tokio::{
     net::{TcpListener, ToSocketAddrs},
     select,
@@ -202,8 +202,8 @@ where
     // figure out how / if to return errors to tendermint
     async fn run(
         mut self,
-        read: impl AsyncReadExt + std::marker::Unpin,
-        write: impl AsyncWriteExt + std::marker::Unpin,
+        read: impl AsyncRead + Unpin,
+        write: impl AsyncWrite + Unpin,
     ) -> Result<(), BoxError> {
         tracing::info!("listening for requests");
 
