@@ -24,7 +24,11 @@ tower = { version = "0.5", features = ["util"] }
 pin-project = "1"
 futures = "0.3"
 tracing = "0.1"
-prost = "0.13"
+prost = "0.14"
+
+[patch.crates-io]
+tendermint-proto = {git = "https://github.com/permissionlessweb/tendermint-rs"}
+tendermint = {git = "https://github.com/permissionlessweb/tendermint-rs"}
 
 [dev-dependencies]
 structopt = "0.3"
