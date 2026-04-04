@@ -33,6 +33,8 @@ prost = "0.14"
 # Fork patches (managed by dep-switch.py)
 
 # Fork patches (managed by dep-switch.py)
+
+# Fork patches (managed by dep-switch.py)
 tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main" }
 tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main" }
 [dev-dependencies]
