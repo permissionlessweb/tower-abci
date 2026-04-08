@@ -45,6 +45,8 @@ prost = "0.14"
 # Fork patches (managed by dep-switch.py)
 
 # Fork patches (managed by dep-switch.py)
+
+# Fork patches (managed by dep-switch.py)
 tendermint-proto = { path = "../tendermint-rs/proto" }
 tendermint = { path = "../tendermint-rs/tendermint" }
 [dev-dependencies]
