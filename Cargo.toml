@@ -14,8 +14,8 @@ documentation = "https://docs.rs/tower-abci"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main" }
-tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main" }
+tendermint-proto = { path = "../tendermint-rs/proto" }
+tendermint = { path = "../tendermint-rs/tendermint" }
 bytes = "1"
 tokio = { version = "1", features = ["io-util", "macros", "net", "rt"] }
 tokio-util = { version = "0.7.18", features = ["codec"] }
@@ -35,8 +35,18 @@ prost = "0.14"
 # Fork patches (managed by dep-switch.py)
 
 # Fork patches (managed by dep-switch.py)
-tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main" }
-tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main" }
+
+# Fork patches (managed by dep-switch.py)
+
+# Fork patches (managed by dep-switch.py)
+
+# Fork patches (managed by dep-switch.py)
+
+# Fork patches (managed by dep-switch.py)
+
+# Fork patches (managed by dep-switch.py)
+tendermint-proto = { path = "../tendermint-rs/proto" }
+tendermint = { path = "../tendermint-rs/tendermint" }
 [dev-dependencies]
 structopt = "0.3"
 tokio = { version = "1", features = ["rt-multi-thread"] }
