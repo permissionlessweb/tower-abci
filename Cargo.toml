@@ -38,6 +38,7 @@ prost = "0.14"
 
 
 
+
 tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
 tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
 [dev-dependencies]
