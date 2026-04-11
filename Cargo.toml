@@ -2,8 +2,8 @@
 name = "tower-abci"
 version = "0.19.1"
 authors = [
-  "Penumbra Labs <team@penumbralabs.xyz>",
-  "Henry de Valence <hdevalence@penumbralabs.xyz"
+    "Penumbra Labs <team@penumbralabs.xyz>",
+    "Henry de Valence <hdevalence@penumbralabs.xyz",
 ]
 edition = "2021"
 license = "MIT"
@@ -11,42 +11,31 @@ description = "A `tower`-based interface to Tendermint's ABCI"
 repository = "https://github.com/penumbra-zone/tower-abci"
 homepage = "https://github.com/penumbra-zone/tower-abci"
 documentation = "https://docs.rs/tower-abci"
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
-tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
-bytes = "1"
-tokio = { version = "1", features = ["io-util", "macros", "net", "rt"] }
-tokio-util = { version = "0.7.18", features = ["codec"] }
-tokio-stream = "0.1"
-tower = { version = "0.5", features = ["util"] }
-pin-project = "1"
-futures = "0.3"
-tracing = "0.1"
-prost = "0.14"
-
-[patch.crates-io]
-
-
-
-
-
-
-
-
-
-
-
-
-tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
-tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
-[dev-dependencies]
-structopt = "0.3"
-tokio = { version = "1", features = ["rt-multi-thread"] }
-tower = {version = "0.5", features = ["buffer", "limit", "load-shed"] }
-tracing-subscriber = "0.3.17"
 
 [features]
 doc = []
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bytes = "1"
+futures = "0.3"
+pin-project = "1"
+prost = "0.14"
+tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
+tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
+tokio = { version = "1", features = ["io-util", "macros", "net", "rt"] }
+tokio-stream = "0.1"
+tokio-util = { version = "0.7.18", features = ["codec"] }
+tower = { version = "0.5", features = ["util"] }
+tracing = "0.1"
+[dev-dependencies]
+structopt = "0.3"
+tokio = { version = "1", features = ["rt-multi-thread"] }
+tower = { version = "0.5", features = ["buffer", "limit", "load-shed"] }
+tracing-subscriber = "0.3.17"
+
+[patch.crates-io]
+
+tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
+tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
 
